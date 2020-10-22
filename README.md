@@ -1,1 +1,1 @@
-# projetct_GanKnight_Hacktoberfest
+# project_GanKnight_Hacktoberfest

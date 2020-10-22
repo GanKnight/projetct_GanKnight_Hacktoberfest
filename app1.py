@@ -1,63 +1,58 @@
-print("Title of program: Post Exam Activity bot")
+print("Sleep advice")
 print()
 while True:
-  description = input("Could you describe how you feel after the examinations?")
-
-  list_of_words = description.split()
-
-  feelings_list = []
-  encouragement_list = []
-  counter = 0
+  hrsleep=input("How many hours do you sleep a day?")
   
-  for each_word in list_of_words:
-    
-    if each_word == "happy":
-      feelings_list.append("happy")
-      encouragement_list.append("Keep smiling. Life is good!")
-      counter += 1
-    if each_word == "bored":
-      feelings_list.append("bored")
-      encouragement_list.append("Find something fun to do")
-      counter += 1
-    if each_word == "tiring":
-      feelings_list.append("tiring")
-      encouragement_list.append("Get some sleep")
-      counter += 1
-    if each_word == "relieved":
-      feelings_list.append("relieved")
-      encouragement_list.append("Relax after the stressful examinations")
-      counter += 1
-
-    if each_word == "dead tired":
-      feelings_list.append("dead tired")
-      encouragement_list.append("Just find something fun to do")
-      counter += 1
-     if each_word == "sad":
-      feelings_list.append("sad")
-      encouragement_list.append("talk to your friends")
-      counter += 1  
-      
-    if counter == 0:
-
-      output = "Sorry I don't really understand. Please use different words?"
-
-  elif counter == 1:
-    
-      output = "It seems that you are feeling quite " + feelings_list[0] + ". However, do remember to "+ encouragement_list[0] + "! Hope you feel better :)"  
-
+  if hrsleep> =8:
+  	print("keep it up")
+    print("It seems like you sleep sufficiently.However do remember to not get addicted to phones as they can affect your sleep.")
+  
   else:
+  	description = input("What is the reason why you sleep so less?")
 
-    feelings = ""    
-    for i in range(len(feelings_list)-1):
-      feelings += feelings_list[i] + ", "
-    feelings += "and " + feelings_list[-1]
+ 	 list_of_words = description.split()
+
+  		feelings_list = []
+  		encouragement_list = []
+  		counter = 0
+  
+  	for each_word in list_of_words:
     
-    encouragement = ""    
-    for j in range(len(encouragement_list)-1):
-      encouragement += encouragement_list[i] + ", "
-    encouragement += "and " + encouragement_list[-1]
+    	if each_word == "play"":
+      		feelings_list.append("play")
+      		encouragement_list.append("Save the playing for later")
+      		counter += 2
+    	if each_word == "study":
+      		feelings_list.append("study")
+      		encouragement_list.append("Good job for being so hardworking! But sleep is more important")
+      		counter += 1
+		if each_word == "read":
+      		feelings_list.append("study")
+      		encouragement_list.append("Reading is great,but do not get to addicted to it!")
+      		counter += 1
+    
+      
+    	if counter == 0:
 
-    output = "It seems that you are feeling quite " + feelings + ". Please always remember "+ encouragement + "! Hope you feel better :)"
+      		output = "Sorry I don't really understand. Please use different words?"
+
+ 	  elif counter == 1:
+    
+      	output = "It seems that you like to " + feelings_list[0] + ". However, do remember that "+ encouragement_list[0] + "sleep is important :)"  
+
+  	else:
+
+        feelings = ""    
+    	for i in range(len(feelings_list)-1):
+      		feelings += feelings_list[i] + ", "
+    		feelings += "and " + feelings_list[-1]
+    
+      		encouragement = ""    
+    		for j in range(len(encouragement_list)-1):
+            encouragement += encouragement_list[i] + ", "
+    		encouragement += "and " + encouragement_list[-1]
+
+    output = "It seems that you are quite into " + feelings + ". Please always remember sleep is important and that"+ encouragement + "! Hope you will take this into account. :)"
 
   print()
   print(output)

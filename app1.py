@@ -26,11 +26,14 @@ while True:
       		feelings_list.append("study")
       		encouragement_list.append("Good job for being so hardworking! But sleep is more important")
       		counter += 1
-		if each_word == "read":
+	if each_word == "read":
       		feelings_list.append("study")
-      		encouragement_list.append("Reading is great,but do not get to addicted to it!")
+      		encouragement_list.append("Reading is great,but do not get to addicted to it! Perhaps you could read it during other parts of the day?")
       		counter += 1
-    
+   	if each_word == "worry":
+      		feelings_list.append("worry")
+      		encouragement_list.append("What are you worried about? Maybe you can tell someone about it?")
+      		counter += 1
       
     	if counter == 0:
 
